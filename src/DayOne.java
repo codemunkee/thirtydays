@@ -25,7 +25,7 @@ public class Solution {
     }
 }
 
-public class DayOne{
-    Solution sol = new Solution();
-
+public class DayOne {
+    Solution.main();
 }
+
