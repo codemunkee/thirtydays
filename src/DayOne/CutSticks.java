@@ -19,9 +19,22 @@ public class CutSticks {
 
     private static void cutIt(int[] numbers) {
 
+        int shortestStick = 1000;
+        int longestStick = 0;
+
         for (int i = 0; i < numbers.length; i++) {
             System.out.println(numbers[i]);
+            if(numbers[i] > longestStick) {
+                longestStick = numbers[i];
+            }
+
+            if(numbers[i] < shortestStick) {
+                shortestStick = numbers[i];
+            }
+
         }
+
+        System.out.println(longestStick - shortestStick);
 
     }
 }
