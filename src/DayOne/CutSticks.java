@@ -33,6 +33,7 @@ public class CutSticks {
 
             if(numbers[i] < shortestStick) {
                 shortestStick = numbers[i];
+            }
         }
 
         System.out.println(longestStick - shortestStick);
