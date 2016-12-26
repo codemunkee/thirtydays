@@ -12,11 +12,14 @@ public class Arithmetic {
         scan.close();
 
         // Write your calculation code here.
+        double tipCost =  mealCost * (tipPercent / 100.0);
+        double taxCost = mealCost * (taxPercent / 100.0);
 
         // cast the result of the rounding operation to an int and save it as totalCost
-        int totalCost = (int) Math.round(/*numberToRoundHere*/);
+        int totalCost = (int) Math.round(mealCost + tipCost + taxCost);
 
         // Print your result
+        System.out.println("The total meal cost is " + totalCost + " dollars.");
     }
 }
 
