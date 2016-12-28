@@ -27,13 +27,15 @@ public class Solution {
             StringBuilder even = new StringBuilder();
             StringBuilder odd = new StringBuilder();
 
-            for (int i = 1; i <= chars.length; i++) {
-                if (i % 2 == 0) {
+            for (int i = 0; i < chars.length; i++) {
+                if ((i + 1) % 2 == 0) {
                     even.append(chars[i]);
                 } else {
                     odd.append(chars[i]);
                 }
             }
+
+            System.out.println(odd + " " + even);
         }
     }
 }
