@@ -22,7 +22,7 @@ class Solution{
             String s = in.next();
             Integer number = phoneBook.get(s);
             if (number != null) {
-                System.out.println(number);
+                System.out.println(s + "=" + number);
             } else {
                 System.out.println("Not found");
             }
