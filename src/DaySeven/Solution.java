@@ -13,5 +13,10 @@ public class Solution {
             arr[i] = in.nextInt();
         }
         in.close();
+
+        for (int i = arr.length - 1; i > -1; i--) {
+            System.out.print(arr[i] + " ");
+        }
+
     }
 }
