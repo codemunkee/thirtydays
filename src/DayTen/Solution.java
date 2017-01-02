@@ -12,12 +12,10 @@ public class Solution {
 
         int maxOnes = 0;
         int consOnes = 0;
-        boolean lastOne = false;
 
         for (char digit: digits) {
             if (digit == '1') {
                 consOnes += 1;
-                lastOne = true;
 
                 if (consOnes > maxOnes) {
                     maxOnes = consOnes;
@@ -25,11 +23,9 @@ public class Solution {
 
             } else {
                 consOnes = 0;
-                lastOne = false;
             }
         }
 
-        System.out.println(inBinary);
         System.out.println(maxOnes);
     }
 }
