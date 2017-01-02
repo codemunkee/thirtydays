@@ -70,6 +70,7 @@ public class Solution {
     public static void main(String[] args) {
         Student stud = new Student("Heraldo", "Memelli", 8135627, new int[] {100, 80} );
         stud.printPerson();
+        System.out.println("Grade: " + stud.calculate());
 
     }
 
