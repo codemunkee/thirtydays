@@ -12,7 +12,9 @@ class Difference {
     }
 
     public void computeDifference() {
-        int min, max; min = max = 0;
+        int min, max;
+        min = 11;
+        max = 0;
 
         for (int i = 0; i < elements.length; i++) {
 
@@ -22,9 +24,9 @@ class Difference {
             if (elements[i] > max) {
                 max = elements[i];
             }
-
-            maximumDifference = java.lang.Math.abs(max - min);
         }
+
+        maximumDifference = java.lang.Math.abs(max - min);
     }
 }
 
