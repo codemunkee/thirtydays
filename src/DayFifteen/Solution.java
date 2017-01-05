@@ -14,9 +14,20 @@ class Node {
 public class Solution {
     public static Node insert(Node head,int data) {
         //Complete this method
-        Node tailNode = new Node(data);
-        head.next = tailNode;
-        return tailNode;
+
+        if (head == null) {
+            return new Node(data);
+        }
+
+        // traverse the list looking for the first node that doesn't have a next
+        Node iterNode = head;
+        while (iterNode.next != null) {
+            iterNode = iterNode.next;
+        }
+
+        iterNode.next = new Node(data);
+
+        return head;
     }
 
     public static void display(Node head) {
