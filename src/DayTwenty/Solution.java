@@ -18,29 +18,28 @@ public class Solution {
         int totalSwaps = 0;
         boolean sorted = false;
 
-        while (!sorted) {
-            int currentSwaps = 0;
+        do {
+            int swaps = 0;
 
             for (int j = 0; j < elements.length; j++) {
-                if (j < elements.length - 2) {
+                if (j < elements.length - 1) {
                     if (elements[j] > elements[j + 1]) {
                         int temp = elements[j];
                         elements[j] = elements[j + 1];
                         elements[j + 1] = temp;
                         totalSwaps += 1;
-                        currentSwaps += 1;
+                        swaps += 1;
                     }
                 }
             }
-            if (currentSwaps == 0) {
+            if (swaps == 0) {
                 sorted = true;
             }
-        }
+        } while (!sorted);
 
-        for (int element: elements) {
-            System.out.print(element);
-        }
-        System.out.println("Total Swaps: " + totalSwaps);
+        System.out.println("Array is sorted in " + totalSwaps + " swaps.");
+        System.out.println("First Element: " + elements[0]);
+        System.out.println("Last Element: " + elements[elements.length - 1]);
 
     }
 
